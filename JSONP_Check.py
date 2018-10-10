@@ -47,7 +47,7 @@ class App(object):
                 response =get(self.url,headers=self.header)
                 self.response.delete(1.0,END)
                 self.response.insert(END,response.text)
-                print response.content
+                # print response.content
                 req_pattern=re.compile('\s*?\w+\([\w\W]+?\)|;$')
                 res_match=req_pattern.match(response.text)
                 if res_match:
